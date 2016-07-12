@@ -39,4 +39,12 @@ public class County {
 		this.cityId = cityId;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "id:"+id+"countyName:"+countyName+"countyCode:"+countyCode+"cityId:"+cityId;
+	}
+	
+	
+
 }

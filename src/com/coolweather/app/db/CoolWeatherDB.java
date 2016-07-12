@@ -11,6 +11,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class CoolWeatherDB {
 
@@ -63,7 +64,7 @@ public class CoolWeatherDB {
 	/**
 	 * 从数据库读取全国所有的省份信息
 	 */
-	public List<Province> loadProvince() {
+	public List<Province> loadProvinces() {
 		List<Province> list = new ArrayList<Province>();
 		Cursor cursor = db
 				.query("Province", null, null, null, null, null, null);
@@ -165,7 +166,8 @@ public class CoolWeatherDB {
 		if (cursor != null) {
 			cursor.close();
 		}
-
+		
+		Log.e("mjr2016", "数据库读取的list"+list);
 		return list;
 
 	}
